@@ -1,0 +1,13 @@
+# revision watcher
+p: Project = input;
+revisionStats : output collection[string][string][int] of string;
+
+visit(p, visitor {
+    before rev : Revision -> {
+        rev_log := rev.log;
+        rev_committer := rev.committer.username;
+        rev_date := formattime("%c", rev.commit_date);
+        rev_files := len(rev.files);
+        revisionStats[rev_date][rev_committer][rev_files] << rev_log;
+    }
+});

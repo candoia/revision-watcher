@@ -11,9 +11,25 @@
       </div>
 
       <div style='text-align: left;' id='content'>
-      <!-- <p>
-        Number of null check fixing revisions : <span id='output' style="color:blue;font-weight:bold"></span>
-      </p> -->
+      <div id='controls'>
+          <form>
+            <label for="revToShow">Get revision info for</label>
+            <select id='revToShow'>
+            </select>
+          </form>
+      </div>
+      <p>
+        Revision Date : <span id='commit-date' style="color:blue;font-weight:bold"></span>
+      </p>
+      <p>
+        Author : <span id='author'></span>
+      </p> 
+      <p>
+        Files Modified : <span id='files'></span>
+      </p>
+      <p>
+        Revision Message : <span id='message'></span>
+      </p>
     </div>
     </div>
     <script src="../../shared/jquery.min.js"></script>
